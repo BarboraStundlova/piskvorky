@@ -10,6 +10,7 @@
   background-repeat: no-repeat;
   flex-direction: column;
   max-width: 80vmin;
+  color:white;
 }
 
 .image {
@@ -28,8 +29,8 @@ h1 {
   font-size: 48px;
   text-align: center;
   font-family: 'Lobster', cursive;
-  color: white;
   margin: 40px 40px;
+  font-weight: 400;
 }
 
 .text {
@@ -38,7 +39,6 @@ h1 {
   margin-top: 40px;
   line-height: 1.5;
   color: white;
-  display: block;
   text-align: center;
 }
 
@@ -99,7 +99,7 @@ h1 {
   width: 100%;
 }
 
-figurecaption {
+figcaption {
   font-style: italic;
   font-size: 12px;
 }
@@ -144,7 +144,6 @@ button:focus {
 }
 
 .nav {
-  color: white;
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 15px;
