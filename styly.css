@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   flex-direction: column;
   max-width: 80vmin;
-  color:white;
+  color: white;
 }
 
 .image {
@@ -71,7 +71,6 @@ h1 {
   background-color: #0090e9;
 }
 
-
 /*pravidla*/
 .rulesDescription {
   display: flex;
@@ -117,7 +116,6 @@ figure {
 
 ol {
   padding-right: 5px;
-  
 }
 
 li {
@@ -129,18 +127,21 @@ li {
 .grid {
   display: flex;
   flex-wrap: wrap;
-  }
+}
 
-button {
+.square {
   flex-basis: 10%;
   padding-top: 10%;
   opacity: 0.6;
   border: solid 1px black;
-  }
+}
 
-button:hover,
-button:focus {
+.square:hover,
+.square:focus {
   filter: brightness(150%);
+}
+.square:disabled {
+  background-color: white;
 }
 
 .nav {
@@ -149,8 +150,8 @@ button:focus {
   margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
-  min-width:100%;
-  }
+  min-width: 100%;
+}
 
 .home {
   text-decoration: none;
@@ -162,12 +163,12 @@ button:focus {
 .restart {
   padding: 5px;
   border-radius: 15%;
- }
+}
 
 .game-icons {
   display: flex;
   justify-content: center;
-  }
+}
 
 .player {
   display: flex;
@@ -175,18 +176,62 @@ button:focus {
 }
 
 .cssCircle {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 3px solid white;
-  margin: 0;
+  height: 30px;
+  width: 30px;
+  background-image: url('images/circle.svg');
+  background-repeat: no-repeat;
   margin-left: 5px;
+  filter: invert(100%);
+}
+
+.cssCross {
+  height: 30px;
+  width: 30px;
+  background-image: url('images/cross.svg');
+  background-repeat: no-repeat;
+  margin-left: 5px;
+  filter: invert(100%);
 }
 
 .play {
-  align-items:initial;
+  align-items: initial;
 }
 
+.O {
+  background-image: url('images/circle.svg');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: 50%, 50%;
+  -webkit-animation: zoomin 0.15s linear;
+  animation: zoomin 0.15s linear;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes zoomin {
+  0% {
+    background-size: 0%;
+  }
+  100% {
+    background-size: 70%;
+  }
+}
+
+.X {
+  background-image: url('images/cross.svg');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: 50%, 50%;
+  -webkit-animation: zoomin 0.15s linear;
+  animation: zoomin 0.15s linear;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes zoomin {
+  0% {
+    background-size: 0%;
+  }
+  100% {
+    background-size: 70%;
+  }
+}
 
 /*široká obrazovka*/
 @media screen and (min-width: 600px) {
@@ -212,9 +257,5 @@ button:focus {
   ol {
     padding-right: 25px;
     margin-left: 25px;
-    }
+  }
 }
-
-
-
-
